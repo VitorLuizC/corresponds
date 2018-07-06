@@ -14,8 +14,8 @@ const schema = {
 test('Corresponds returns .toLeft and .toRight functions', (context) => {
   const correspondent = corresponds(schema);
 
-  context.true(typeof correspondent.toLeft, 'function');
-  context.true(typeof correspondent.toRight, 'function');
+  context.is(typeof correspondent.toLeft, 'function');
+  context.is(typeof correspondent.toRight, 'function');
 });
 
 const valueA = {
