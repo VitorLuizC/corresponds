@@ -1,0 +1,32 @@
+{
+  "name": "corresponds",
+  "version": "0.0.0",
+  "description": "",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "tsc && ava"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VitorLuizC/corresponds.git"
+  },
+  "keywords": [
+    "object",
+    "map",
+    "corresponds"
+  ],
+  "author": {
+    "url": "https://vitorluizc.github.io/",
+    "name": "Vitor Luiz Cavalcanti",
+    "email": "vitorluizc@outlook.com"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/VitorLuizC/corresponds/issues"
+  },
+  "homepage": "https://github.com/VitorLuizC/corresponds#readme",
+  "devDependencies": {
+    "ava": "^0.25.0",
+    "typescript": "^2.9.2"
+  }
+}
