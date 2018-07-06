@@ -1,10 +1,9 @@
 {
   "compilerOptions": {
+    "lib": [ "es2017" ],
     "target": "es2015",
     "module": "es2015",
+    "moduleResolution": "node",
     "allowSyntheticDefaultImports": true
-  },
-  "files": [
-    "test/index.ts"
-  ]
+  }
 }

@@ -4,7 +4,9 @@
   "description": "",
   "main": "src/index.js",
   "scripts": {
-    "test": "tsc && ava"
+    "pretest": "tsc -p tsconfig.test.json",
+    "test": "ava",
+    "build": "tsc -p tsconfig.build.json"
   },
   "repository": {
     "type": "git",
