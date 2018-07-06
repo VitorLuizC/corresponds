@@ -15,19 +15,19 @@ export function corresponds (schema: CorrespondentSchema) {
 }
 
 export function correspondsToRight (schema: CorrespondentSchema, object: Object): Object {
-  const entries = Object.entries(schema);
-  const correspondent = entries.reduce((correspondent, [ right, left ]) => {
-    path.set(correspondent, left, path.get(object, right));
-    return correspondent;
-  }, {});
+  const correspondent = {};
+
+  Object.keys(schema).forEach(
+    (property) => path.set(correspondent, schema[property], path.get(object, property)));
+
   return correspondent;
 }
 
 export function correspondsToLeft (schema: CorrespondentSchema, object: Object): Object {
-  const entries = Object.entries(schema);
-  const correspondent = entries.reduce((correspondent, [ right, left ]) => {
-    path.set(correspondent, right, path.get(object, left));
-    return correspondent;
-  }, {});
+  const correspondent = {};
+
+  Object.keys(schema).forEach(
+    (property) => path.set(correspondent, property, path.get(object, schema[property])));
+
   return correspondent;
 }
